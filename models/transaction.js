@@ -1,3 +1,4 @@
+//Mongoose Schema, setting a name, value and date for our database
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;

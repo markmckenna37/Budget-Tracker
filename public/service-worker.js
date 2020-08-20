@@ -1,3 +1,4 @@
+//Service worker for offline functionality. Requiring cache files.
 const FILES_TO_CACHE = [
     "/",
     "/index.html",
@@ -10,9 +11,11 @@ const FILES_TO_CACHE = [
     "/assets/images/icons/icon-512x512.png"
   ];
   
+  //naming our caches
   const STATIC_CACHE = "static-cache-v1";
   const RUNTIME_CACHE = "runtime-cache";
   
+  //installing our cache files after listening/finding them
   self.addEventListener("install", event => {
     event.waitUntil(
       caches
